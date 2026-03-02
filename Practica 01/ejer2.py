@@ -20,10 +20,11 @@ d=float(input("Ingrese d: "))
 e=float(input("Ingrese e: "))
 f=float(input("Ingrese f: "))
 
+ec=EcuacionLineal(a,b,c,d,f)
 
-if EcuacionLineal.tieneSolucion():
-    print("La solucion de x es: ",EcuacionLineal.getX(e))
-    print("La solucion de y es: ", EcuacionLineal.getY(e))
+if ec.tieneSolucion():
+    print("La solucion de x es: ",ec.getX(e))
+    print("La solucion de y es: ", ec.getY(e))
 else:
     print("La ecuación no tiene solución")
                         
