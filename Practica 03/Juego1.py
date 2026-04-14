@@ -1,6 +1,6 @@
 import random
 class Juego:
-    def __init__(self, numeroDeVidas, record):
+    def __init__(self, numeroDeVidas):
         self.numeroDeVidas=numeroDeVidas
         self.record=0
         self.vidasIniciales=self.numeroDeVidas
@@ -13,12 +13,12 @@ class Juego:
             self.record=self.intentos
     
     def quitaVida(self):
-        if self.numeroDeVidas>0:
-            self.numeroDeVidas-=1
-    
+        self.numeroDeVidas-=1
+        return self.numeroDeVidas>0
+            
 class JuegoAdivinaNumero(Juego):
-    def __init__(self, numeroAAdivinar):
-        super().__init__(self.numeroDeVidas)
+    def __init__(self, numeroDeVidas):
+        super().__init__(numeroDeVidas)
         self.numeroAAdivinar=0
 
     def juega(self):
